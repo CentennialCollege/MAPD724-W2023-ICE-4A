@@ -39,7 +39,7 @@
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIx-97-pET">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIx-97-pET">
                                 <rect key="frame" x="20" y="158" width="390" height="167"/>
                                 <string key="text">Play 
 Mail Pilot</string>
@@ -47,7 +47,7 @@ Mail Pilot</string>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwu-qp-4Ce">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwu-qp-4Ce">
                                 <rect key="frame" x="137" y="440" width="156" height="52"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="START" titleAlignment="center">
@@ -58,16 +58,41 @@ Mail Pilot</string>
                                     <action selector="startButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="X8V-d8-ad9"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UP-Sg-773">
+                                <rect key="frame" x="20" y="158" width="390" height="167"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="70"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecx-fi-dYk">
+                                <rect key="frame" x="126" y="440" width="178" height="52"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="36"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="PT5-R5-yeH"/>
+                                    <action selector="startButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="VFT-Eq-I6J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ecx-fi-dYk" firstAttribute="baseline" secondItem="Lwu-qp-4Ce" secondAttribute="baseline" id="2s4-fW-GaJ"/>
                             <constraint firstItem="Lwu-qp-4Ce" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="2xd-Qf-Jug"/>
+                            <constraint firstItem="8UP-Sg-773" firstAttribute="trailing" secondItem="HIx-97-pET" secondAttribute="trailing" id="3lJ-7a-ZwD"/>
+                            <constraint firstItem="Ecx-fi-dYk" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="126" id="5gv-9x-8lg"/>
+                            <constraint firstItem="Ecx-fi-dYk" firstAttribute="centerX" secondItem="Lwu-qp-4Ce" secondAttribute="centerX" id="D5S-m7-hbO"/>
                             <constraint firstItem="R6g-un-wBV" firstAttribute="baseline" secondItem="5Z6-gx-KUg" secondAttribute="baseline" id="GAM-h4-D2b"/>
+                            <constraint firstItem="8UP-Sg-773" firstAttribute="bottom" secondItem="HIx-97-pET" secondAttribute="bottom" id="LFI-Z5-K7a"/>
                             <constraint firstItem="5Z6-gx-KUg" firstAttribute="trailing" secondItem="HIx-97-pET" secondAttribute="trailing" id="Mv1-j6-IsQ"/>
                             <constraint firstItem="R6g-un-wBV" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="ORJ-9W-7Z7"/>
                             <constraint firstItem="HIx-97-pET" firstAttribute="top" secondItem="R6g-un-wBV" secondAttribute="bottom" constant="78" id="R6N-MR-gL6"/>
+                            <constraint firstItem="8UP-Sg-773" firstAttribute="top" secondItem="HIx-97-pET" secondAttribute="top" id="VFk-7F-m8n"/>
                             <constraint firstItem="Lwu-qp-4Ce" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="137" id="fxW-up-80h"/>
+                            <constraint firstItem="8UP-Sg-773" firstAttribute="leading" secondItem="HIx-97-pET" secondAttribute="leading" id="g2B-EM-Ban"/>
                             <constraint firstItem="HIx-97-pET" firstAttribute="centerX" secondItem="Lwu-qp-4Ce" secondAttribute="centerX" id="mNE-BF-gof"/>
                             <constraint firstItem="R6g-un-wBV" firstAttribute="leading" secondItem="HIx-97-pET" secondAttribute="leading" id="ofq-dc-5Yg"/>
                             <constraint firstItem="R6g-un-wBV" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="wNW-aM-oWv"/>
@@ -75,7 +100,9 @@ Mail Pilot</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EndLabel" destination="8UP-Sg-773" id="eIw-vQ-Hun"/>
                         <outlet property="LivesLabel" destination="R6g-un-wBV" id="pYZ-rH-SwD"/>
+                        <outlet property="RestartButton" destination="Ecx-fi-dYk" id="bIX-wv-Ujg"/>
                         <outlet property="ScoreLabel" destination="5Z6-gx-KUg" id="p3H-7A-tGB"/>
                         <outlet property="StartButton" destination="Lwu-qp-4Ce" id="5fw-zX-a50"/>
                         <outlet property="StartLabel" destination="HIx-97-pET" id="Vjc-jf-naq"/>
@@ -83,7 +110,7 @@ Mail Pilot</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270.69767441860466" y="-22.532188841201719"/>
+            <point key="canvasLocation" x="282" y="-145"/>
         </scene>
     </scenes>
     <resources>

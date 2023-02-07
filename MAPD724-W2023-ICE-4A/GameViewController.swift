@@ -8,9 +8,9 @@ class GameViewController: UIViewController
     @IBOutlet weak var LivesLabel: UILabel!
     @IBOutlet weak var StartLabel: UILabel!
     @IBOutlet weak var StartButton: UIButton!
-    
+    @IBOutlet weak var EndLabel: UILabel!
     var currentScene: GKScene?
-    
+    @IBOutlet weak var RestartButton: UIButton!
     
     override func viewDidLoad()
     {
@@ -63,11 +63,15 @@ class GameViewController: UIViewController
     {
         ScoreLabel.isHidden = true
         LivesLabel.isHidden = true
+        StartLabel.isHidden = false
+        StartButton.isHidden = false
         setScene(sceneName: "StartScene")
     }
     
     func presentEndScene()
     {
+        RestartButton.isHidden = false
+        EndLabel.isHidden = false
         ScoreLabel.isHidden = true
         LivesLabel.isHidden = true
         setScene(sceneName: "EndScene")
@@ -86,5 +90,18 @@ class GameViewController: UIViewController
         setScene(sceneName: "GameScene")
     }
     
+    @IBAction func restartButton_Pressed(_ sender: UIButton)
+    {
+        RestartButton.isHidden = true
+        EndLabel.isHidden = true
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
+        
+    }
 }
 

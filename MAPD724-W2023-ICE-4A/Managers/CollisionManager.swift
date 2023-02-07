@@ -35,11 +35,22 @@ class CollisionManager
                     ScoreManager.Score += 100
                     gameViewController?.updateScoreLabel()
                     scene.run(SKAction.playSoundFileNamed("yay", waitForCompletion: false))
+                    // give player extra life every 2000 points
+                    if(ScoreManager.Score % 2000 == 0)
+                    {
+                        ScoreManager.Lives += 1
+                        gameViewController?.updateLivesLabel()
+                        // play some "Lives Added" Sound
+                    }
                     break
                 case "cloud":
                     ScoreManager.Lives -= 1
                     gameViewController?.updateLivesLabel()
                     scene.run(SKAction.playSoundFileNamed("thunder", waitForCompletion: false))
+                    if(ScoreManager.Lives < 1)
+                    {
+                        gameViewController?.presentEndScene()
+                    }
                     break
                 default:
                     break
