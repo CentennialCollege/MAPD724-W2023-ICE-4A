@@ -4,9 +4,10 @@ import GameplayKit
 
 class GameViewController: UIViewController
 {
-
     @IBOutlet weak var ScoreLabel: UILabel!
     @IBOutlet weak var LivesLabel: UILabel!
+    @IBOutlet weak var StartLabel: UILabel!
+    @IBOutlet weak var StartButton: UIButton!
     
     var currentScene: GKScene?
     
@@ -15,14 +16,11 @@ class GameViewController: UIViewController
     {
         super.viewDidLoad()
 
-        setScene(sceneName: "EndScene")
+        presentStartScene()
         
         // Initialize the Lives and Score
         CollisionManager.gameViewController = self
-        ScoreManager.Score = 0
-        ScoreManager.Lives = 5
-        updateLivesLabel()
-        updateScoreLabel()
+
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask
@@ -59,7 +57,34 @@ class GameViewController: UIViewController
                 view.ignoresSiblingOrder = true
             }
         }
-        
     }
+    
+    func presentStartScene()
+    {
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+        setScene(sceneName: "StartScene")
+    }
+    
+    func presentEndScene()
+    {
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+        setScene(sceneName: "EndScene")
+    }
+    
+    @IBAction func startButton_Pressed(_ sender: UIButton)
+    {
+        StartButton.isHidden = true
+        StartLabel.isHidden = true
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
+    }
+    
 }
 
