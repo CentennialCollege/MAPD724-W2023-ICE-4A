@@ -41,6 +41,10 @@
 		E91B219F2991C6120026AE3E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B21982991C6120026AE3E /* Player.swift */; };
 		E91B21A32991C61A0026AE3E /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B21A12991C61A0026AE3E /* ScoreManager.swift */; };
 		E91B21A42991C61A0026AE3E /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B21A22991C61A0026AE3E /* CollisionManager.swift */; };
+		E91B21A72991C99D0026AE3E /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E91B21A62991C99D0026AE3E /* StartScene.sks */; };
+		E91B21A92991CA0E0026AE3E /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B21A82991CA0E0026AE3E /* StartScene.swift */; };
+		E91B21AB2991CF2D0026AE3E /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E91B21AA2991CF2D0026AE3E /* EndScene.sks */; };
+		E91B21AD2991CF690026AE3E /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B21AC2991CF690026AE3E /* EndScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +83,10 @@
 		E91B21982991C6120026AE3E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E91B21A12991C61A0026AE3E /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		E91B21A22991C61A0026AE3E /* CollisionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
+		E91B21A62991C99D0026AE3E /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		E91B21A82991CA0E0026AE3E /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		E91B21AA2991CF2D0026AE3E /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
+		E91B21AC2991CF690026AE3E /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +119,12 @@
 		E91B21502991C5DA0026AE3E /* MAPD724-W2023-ICE-4A */ = {
 			isa = PBXGroup;
 			children = (
+				E91B21A52991C8D20026AE3E /* Scenes */,
 				E91B21A02991C61A0026AE3E /* Managers */,
 				E91B21902991C6110026AE3E /* Core */,
 				E91B21942991C6120026AE3E /* GameObjects */,
 				E91B21682991C6060026AE3E /* Assets */,
 				E91B21512991C5DA0026AE3E /* AppDelegate.swift */,
-				E91B21532991C5DA0026AE3E /* GameScene.sks */,
-				E91B21572991C5DA0026AE3E /* GameScene.swift */,
 				E91B21592991C5DA0026AE3E /* GameViewController.swift */,
 				E91B215B2991C5DA0026AE3E /* Main.storyboard */,
 				E91B215E2991C5DD0026AE3E /* Assets.xcassets */,
@@ -205,6 +212,19 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		E91B21A52991C8D20026AE3E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E91B21532991C5DA0026AE3E /* GameScene.sks */,
+				E91B21572991C5DA0026AE3E /* GameScene.swift */,
+				E91B21A62991C99D0026AE3E /* StartScene.sks */,
+				E91B21A82991CA0E0026AE3E /* StartScene.swift */,
+				E91B21AA2991CF2D0026AE3E /* EndScene.sks */,
+				E91B21AC2991CF690026AE3E /* EndScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91B21AB2991CF2D0026AE3E /* EndScene.sks in Resources */,
 				E91B21892991C6060026AE3E /* thunder.ogg in Resources */,
 				E91B21802991C6060026AE3E /* plane1.png in Resources */,
 				E91B215D2991C5DA0026AE3E /* Main.storyboard in Resources */,
@@ -282,6 +303,7 @@
 				E91B21822991C6060026AE3E /* plane.png in Resources */,
 				E91B218B2991C6060026AE3E /* engine.ogg in Resources */,
 				E91B215F2991C5DD0026AE3E /* Assets.xcassets in Resources */,
+				E91B21A72991C99D0026AE3E /* StartScene.sks in Resources */,
 				E91B21812991C6060026AE3E /* backButton.png in Resources */,
 				E91B21622991C5DD0026AE3E /* LaunchScreen.storyboard in Resources */,
 				E91B21862991C6060026AE3E /* nextButton.png in Resources */,
@@ -303,6 +325,8 @@
 				E91B219E2991C6120026AE3E /* Ocean.swift in Sources */,
 				E91B219B2991C6120026AE3E /* Layer.swift in Sources */,
 				E91B219D2991C6120026AE3E /* Cloud.swift in Sources */,
+				E91B21AD2991CF690026AE3E /* EndScene.swift in Sources */,
+				E91B21A92991CA0E0026AE3E /* StartScene.swift in Sources */,
 				E91B21522991C5DA0026AE3E /* AppDelegate.swift in Sources */,
 				E91B219F2991C6120026AE3E /* Player.swift in Sources */,
 				E91B21A32991C61A0026AE3E /* ScoreManager.swift in Sources */,
